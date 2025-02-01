@@ -11,9 +11,9 @@ public class MathCalculator {
         return sum(first, second) + multiple(first, second) + minus(first, second) + delenie(first, second);
     }
     public static void main(String[] args){
-        System.out.println("Результат рассчета равен: " + sumAndMultiply(10, 20));
-        System.out.println("Результат рассчета равен: " + minusAndDelenie(10, 20));
-        System.out.println("Результат рассчета равен: " + all(10, 20));
+        System.out.println("Результат рассчета равен: " + sumAndMultiply(11, 20));
+        System.out.println("Результат рассчета равен: " + minusAndDelenie(11, 20));
+        System.out.println("Результат рассчета равен: " + all(11, 20));
     }
 
 }
