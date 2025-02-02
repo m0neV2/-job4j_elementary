@@ -8,7 +8,6 @@ public class Fit {
     }
 
     public static double womanWeight(float height) {
-
         return (height - 110) * 1.15;
     }
 
