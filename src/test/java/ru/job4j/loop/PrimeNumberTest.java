@@ -37,8 +37,8 @@ class PrimeNumberTest {
     }
 
     @Test
-    void when49Then15() {
-        int finish = 49;
+    void when50Then15() {
+        int finish = 50;
         int result = PrimeNumber.calc(finish);
         int expected = 15;
         assertThat(result).isEqualTo(expected);
