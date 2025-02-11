@@ -21,10 +21,10 @@ class PrimeNumberTest {
     }
 
     @Test
-    void when2Then1() {
-        int finish = 2;
+    void when3Then2() {
+        int finish = 3;
         int result = PrimeNumber.calc(finish);
-        int expected = 1;
+        int expected = 2;
         assertThat(result).isEqualTo(expected);
     }
 
