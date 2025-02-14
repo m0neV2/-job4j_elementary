@@ -25,7 +25,7 @@ class SavingsTest {
     }
 
     @Test
-    void whenGoal1000Deposit100Percent20ThenYears7() {
+    void whenGoal1000Deposit100Percent20ThenYear7() {
         double goal = 1000;
         double annualDeposit = 100;
         double percent = 20;
