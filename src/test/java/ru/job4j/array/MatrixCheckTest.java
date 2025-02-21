@@ -5,50 +5,38 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixCheckTest {
     @Test
-    public void whenHasMonoHorizontal() {
+    public void whenDiagonalFullX() {
         char[][] input = {
-                {' ', ' ', ' '},
-                {'X', 'X', 'X'},
-                {' ', ' ', ' '},
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
         };
-        int row = 1;
-        boolean result = MatrixCheck.monoHorizontal(input, row);
-        assertThat(result).isTrue();
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'X', 'X'};
+        assertThat(result).containsExactly(expected);
     }
 
     @Test
-    public void whenHasMonoHorizontal2() {
+    public void whenDiagonalFullOne() {
         char[][] input = {
-                {' ', ' ', ' '},
-                {' ', ' ', ' '},
-                {' ', ' ', ' '},
+                {'1', ' ', ' '},
+                {' ', '1', ' '},
+                {' ', ' ', '1'},
         };
-        int row = 1;
-        boolean result = MatrixCheck.monoHorizontal(input, row);
-        assertThat(result).isFalse();
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'1', '1', '1'};
+        assertThat(result).containsExactly(expected);
     }
 
     @Test
-    public void whenHasMonoVertical() {
+    public void whenDiagonalMix() {
         char[][] input = {
-                {' ', ' ', 'X'},
-                {' ', ' ', 'X'},
-                {' ', ' ', 'X'},
+                {'X', ' ', ' '},
+                {' ', 'Y', ' '},
+                {' ', ' ', 'Z'},
         };
-        int column = 2;
-        boolean result = MatrixCheck.monoVertical(input, column);
-        assertThat(result).isTrue();
-    }
-
-    @Test
-    public void whenHasMonoVertical2() {
-        char[][] input = {
-                {' ', ' ', ' '},
-                {' ', ' ', ' '},
-                {' ', ' ', ' '},
-        };
-        int column = 2;
-        boolean result = MatrixCheck.monoVertical(input, column);
-        assertThat(result).isFalse();
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'Y', 'Z'};
+        assertThat(result).containsExactly(expected);
     }
 }
